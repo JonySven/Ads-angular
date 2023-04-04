@@ -7,9 +7,9 @@
     </div>
   
     <div>
-      <p class="title">{{ data.price }}</p>
+      <p class="title">{{ data.price | number}} &#8381; </p>
   
-      <div class="card flex justify-content-center">
+      <div>
         <p-button
           (click)="showDialog()"
           icon="pi pi-phone"
