@@ -1,0 +1,40 @@
+<div class="container">
+  <app-breadcrumb [items]="[{label: data.title}]"></app-breadcrumb>
+  <div class="wrap">
+    <div>
+      <h3 class="title">{{ data.title }}</h3>
+      <app-galleria [images]="[data.imgSrc]"></app-galleria>
+    </div>
+  
+    <div>
+      <p class="title">{{ data.price }}</p>
+  
+      <div class="card flex justify-content-center">
+        <p-button
+          (click)="showDialog()"
+          icon="pi pi-phone"
+          label="Показать номер телефона"
+        ></p-button>
+        <p-dialog
+          header="Номер телефона:"
+          [(visible)]="visible"
+          [modal]="true"
+          [style]="{ width: '50vw' }"
+          [draggable]="false"
+          [resizable]="false"
+        >
+          <p class="m-0">8 (978) 123-456-78</p>
+        </p-dialog>
+      </div>
+      <p class="text">
+        <span class="subtitle">Адрес</span> <br />
+        {{ data.address }}
+      </p>
+      <p class="text">
+        <span class="subtitle">Описание</span> <br />
+        {{ data.description }}
+      </p>
+    </div>
+  </div>
+</div>
+

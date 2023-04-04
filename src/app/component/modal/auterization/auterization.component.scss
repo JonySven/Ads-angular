@@ -1,0 +1,21 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .column{
+        flex-direction: column;
+        margin: 25px 0 10px;
+        gap: 16px;
+        input{
+            width: fit-content;
+        }
+    }
+    .btn{
+        margin-top: 25px;
+    }
+    .flex{
+        margin-top: 20px;
+    }
+
+}

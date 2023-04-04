@@ -1,0 +1,50 @@
+.container {
+    margin-top: 35px;
+  
+    h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #1E293B;
+    }
+
+    .form {
+          max-width: 856px;
+          width: 100%;
+        .row {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+        }
+
+ 
+
+        label {
+            margin-bottom: 8px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1E293B;
+        }
+    }
+           .politic {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #64748B;
+
+            a {
+                color: #3B82F6;
+            }
+        }
+}

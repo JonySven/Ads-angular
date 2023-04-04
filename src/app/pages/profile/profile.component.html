@@ -1,0 +1,59 @@
+<div class="container">
+  <h3>Настройки</h3>
+  <form [formGroup]="profileForm" (ngSubmit)="updateUser()">
+    <div class="wrap">
+      <div>
+        <label>Имя</label>
+        <input type="text" pInputText formControlName="userName" />
+      </div>
+      <div>
+        <label>Номер телефона</label>
+        <p-inputNumber inputId="integeronly" formControlName="userTel">
+        </p-inputNumber>
+      </div>
+    </div>
+
+    <div>
+      <label
+        >Адреc<span>(будет указываться в объявлениях по умолчанию)</span></label
+      >
+      <p-dropdown
+        formControlName="userAdress"
+        [options]="adress"
+        optionLabel="name"
+      ></p-dropdown>
+    </div>
+    <div class="btn">
+      <p-button type="submit" [disabled]="true" label="Сохранить"></p-button>
+    </div>
+  </form>
+  <h3>Смена пароля</h3>
+
+  <form [formGroup]="passwordForm" (ngSubmit)="updatePassword()">
+    <div>
+      <label>Текущий пароль</label>
+      <input
+        type="password"
+        formControlName="password"
+        pInputText
+        placeholder="Введите текущий пароль"
+      />
+    </div>
+    <div>
+      <label>Новый пароль <span> (минимум 8 символов) </span></label>
+      <input
+        type="password"
+        formControlName="newPassword"
+        pInputText
+        placeholder="Введите текущий пароль"
+      />
+    </div>
+    <div class="btn">
+      <p-button
+        type="submit"
+        [disabled]="false"
+        label="Изменить пароль"
+      ></p-button>
+    </div>
+  </form>
+</div>

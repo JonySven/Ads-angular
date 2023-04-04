@@ -1,0 +1,17 @@
+<a class="card flex justify-content-center" [routerLink]="['/ad', data.id]">
+  <p-card
+    [header]="data.title"
+    [subheader]="data.price | currency"
+    [style]="{ width: '300px' }"
+  >
+    <ng-template pTemplate="header">
+      <img alt="Card" [src]="data.imgSrc" />
+    </ng-template>
+
+    <p class="location">
+      {{ data.address }},
+      <br />
+      {{ data.createdAt }}
+    </p>
+  </p-card>
+</a>

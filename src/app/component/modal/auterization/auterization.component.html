@@ -1,0 +1,27 @@
+<form [formGroup]="enter" (ngSubmit)="submit()">
+  <div class="flex column">
+    <p-inputMask
+      mask="9-999-999-99-99"
+      placeholder="Номер телефона"
+      formControlName="tel"
+    ></p-inputMask>
+    <input
+      type="password"
+      formControlName="password"
+      pInputText
+      placeholder="Пароль"
+    />
+  </div>
+  <div class="flex">
+
+    <p-checkbox formControlName="selected" value="selected"></p-checkbox>
+    <label>Запомнить меня</label>
+
+    
+  </div>
+  <a class="flex" routerLink="registration">Регистрация</a>
+
+  <div class="flex btn">
+    <p-button label="Войти" [loading]="loading" (click)="load()"></p-button>
+  </div>
+</form>

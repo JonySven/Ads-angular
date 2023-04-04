@@ -1,0 +1,39 @@
+:host{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    .name{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .grid{
+        grid-template-columns: 284px 152px 1fr;
+        gap: 12px;
+    }
+    h2{
+        cursor: pointer;
+        user-select: none;
+    }
+}
+.card{
+    .p-button{
+        white-space: nowrap;
+        font-size: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #3B82F6;
+        background-color: #fff;
+    }
+}
+.p-inputgroup{
+    .p-button{
+        font-size: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

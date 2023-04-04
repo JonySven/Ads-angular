@@ -1,0 +1,40 @@
+:host{
+    form{
+        max-width: 856px;
+        width: 100%;
+   
+    }
+    color: #1E293B;
+    h3{
+        margin-top: 32px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: stretch;
+        gap: 25px;
+      
+    }
+    .btn{
+        margin-top: 25px;
+    }
+    label{
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    span{
+        color: #64748B;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}
