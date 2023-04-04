@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AuterizationComponent } from '../modal/auterization/auterization.component';
-import { DialogModule } from 'primeng/dialog';
+import { Router } from '@angular/router';
+
 
 
 
@@ -13,14 +14,22 @@ import { DialogModule } from 'primeng/dialog';
 })
 export class HederComponent {
 
+  autoriz: boolean = false
+
   ref: DynamicDialogRef
 
-  constructor(public dialogService: DialogService) {}
+  constructor(public dialogService: DialogService, private _router: Router) { }
 
-  show(){
-    this.ref = this.dialogService.open(AuterizationComponent, {header: 'Авторизация'})
+  show() {
+    this.ref = this.dialogService.open(AuterizationComponent, { header: 'Авторизация' })
   }
-
+  check() {
+    if (this.autoriz == true) {
+      this._router.navigate(['create'])
+    } else {
+      this.show()
+    }
+  }
 }
 
 
